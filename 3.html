@@ -1,0 +1,552 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;2746376813296&quot;));">
+
+ 
+
+<div id="2745984794192" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Wed Dec 18 24, 15:48:07</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">+0.830</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">A_C ratio</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.828</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.786</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.779</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.761</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.748</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">24h protien 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.736</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.734</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">low complement</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.730</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.703</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.696</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.657</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">prednison</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.631</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.581</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.558</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Anti-DNA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.543</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.531</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.460</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.415</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.315</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.266</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.259</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">WBCS 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.249</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">micofenolate mofetile</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.230</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.211</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">duration </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.185</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.184</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">azathioprine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.167</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.147</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">WBCs</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.129</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Wt</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.102</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">lymphocytes</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.080</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb</td>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="2746376633504" class="normal" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Wed Dec 18 24, 15:49:01</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">+0.583</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">WBCS 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.449</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">lymphocytes</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.413</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.401</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 1</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.384</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.354</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">24h protien 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.337</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.337</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.331</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">low complement</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.330</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.326</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.324</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.322</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.321</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">WBCs</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.315</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.306</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.303</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.299</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.293</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.268</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.262</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">prednison</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.253</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.227</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.227</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.210</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.195</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.182</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Anti-DNA</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.132</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">azathioprine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.087</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Wt</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.064</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.016</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">micofenolate mofetile</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.013</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">duration </td>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div><div id="2746376813296" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Correlations <span class="timestamp">Wed Dec 18 24, 15:49:38</span></h1><div class="content">
+<h2>Pearson correlation</h2><table>
+<tbody><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">1</th>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">+0.830</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">A_C ratio</td>
+<td style="color:#ffffff; background:#0078d7; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">2</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.828</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">3</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.786</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">4</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.779</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">5</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.761</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">pus cells</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">6</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.748</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">24h protien 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">7</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.736</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">casts</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">8</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.734</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">low complement</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">9</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.730</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">10</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.703</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">albumin</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">11</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.696</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">12</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.657</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">prednison</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">13</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.631</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">RBCs </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">14</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.581</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">ESR 1</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">15</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.558</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Anti-DNA</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">16</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.543</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinin 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">17</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.531</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">creatinine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">18</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.460</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">19</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.415</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">urea 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">20</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.315</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Lymphocytes 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">21</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.266</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">22</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.259</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">WBCS 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">23</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.249</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">micofenolate mofetile</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">24</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.230</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">age</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">25</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.211</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">duration </td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">26</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">-0.185</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb 2</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">27</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.184</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">azathioprine</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">28</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.167</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">PLT</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">29</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.147</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">WBCs</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">30</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.129</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Wt</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">31</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.102</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">lymphocytes</td>
+</tr><tr><th style="color:black; background:transparent; text-align:left; vertical-align:middle;">32</th>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">+0.080</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">A_C ratio 2</td>
+<td style="color:black; background:transparent; text-align:left; vertical-align:middle;">Hb</td>
+</tr></tbody></table></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
